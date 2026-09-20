@@ -2,15 +2,14 @@ function Connections({
   musicCount,
   purchaseCount,
   indiaCount,
+  onSourceSelect,
 }) {
   return (
     <section
       id="connections"
       className="section connections"
     >
-
       <div className="section-heading">
-
         <p className="eyebrow">
           CONNECTIONS
         </p>
@@ -24,12 +23,14 @@ function Connections({
           can reveal patterns across
           different parts of your digital life.
         </p>
-
       </div>
 
       <div className="connection-grid">
 
-        <div className="connection-card">
+        <button
+          className="connection-card"
+          onClick={() => onSourceSelect("Spotify")}
+        >
           <div className="big-icon">
             🎵
           </div>
@@ -42,13 +43,16 @@ function Connections({
             {musicCount} music moments
             captured in your journey.
           </p>
-        </div>
+        </button>
 
         <div className="connection-line">
           →
         </div>
 
-        <div className="connection-card">
+        <button
+          className="connection-card"
+          onClick={() => onSourceSelect("All")}
+        >
           <div className="big-icon">
             🛍️
           </div>
@@ -61,13 +65,18 @@ function Connections({
             {purchaseCount} transaction moments
             found in your data.
           </p>
-        </div>
+        </button>
 
         <div className="connection-line">
           →
         </div>
 
-        <div className="connection-card">
+        <button
+          className="connection-card"
+          onClick={() =>
+            onSourceSelect("India Transactions")
+          }
+        >
           <div className="big-icon">
             🇮🇳
           </div>
@@ -80,7 +89,7 @@ function Connections({
             {indiaCount} transaction moments
             found in the India dataset.
           </p>
-        </div>
+        </button>
 
         <div className="connection-line">
           →
@@ -102,7 +111,6 @@ function Connections({
         </div>
 
       </div>
-
     </section>
   );
 }

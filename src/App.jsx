@@ -21,7 +21,6 @@ function App() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
   const [source, setSource] = useState("All");
-
   // Load India Transactions
   useEffect(() => {
     Papa.parse("/data/india_transactions.csv", {

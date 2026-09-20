@@ -2,6 +2,7 @@ function Timeline({
   musicCount,
   householdCount,
   indiaCount,
+  onSourceSelect,
 }) {
   return (
     <section className="section timeline">
@@ -18,23 +19,39 @@ function Timeline({
 
       <div className="timeline-grid">
 
-        <div className="timeline-item">
+        <button
+          className="timeline-item"
+          onClick={() => onSourceSelect("Spotify")}
+        >
           <span>🎵</span>
           <h3>{musicCount}</h3>
           <p>Music moments</p>
-        </div>
+          <small>Explore music →</small>
+        </button>
 
-        <div className="timeline-item">
+        <button
+          className="timeline-item"
+          onClick={() =>
+            onSourceSelect("Household Transactions")
+          }
+        >
           <span>🛒</span>
           <h3>{householdCount}</h3>
           <p>Household transactions</p>
-        </div>
+          <small>Explore household →</small>
+        </button>
 
-        <div className="timeline-item">
+        <button
+          className="timeline-item"
+          onClick={() =>
+            onSourceSelect("India Transactions")
+          }
+        >
           <span>🇮🇳</span>
           <h3>{indiaCount}</h3>
           <p>India transactions</p>
-        </div>
+          <small>Explore India →</small>
+        </button>
 
       </div>
 

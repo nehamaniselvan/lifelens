@@ -2,12 +2,12 @@ function Insights({
   musicCount,
   householdCount,
   indiaCount,
+  onSourceSelect,
 }) {
   return (
     <section className="section insights">
 
       <div className="section-heading">
-
         <p className="eyebrow">
           PATTERN DISCOVERY
         </p>
@@ -15,13 +15,14 @@ function Insights({
         <h2>
           What your receipts reveal
         </h2>
-
       </div>
 
       <div className="insight-grid">
 
-        <div className="insight-card">
-
+        <button
+          className="insight-card"
+          onClick={() => onSourceSelect("Spotify")}
+        >
           <span>01</span>
 
           <h3>
@@ -34,10 +35,15 @@ function Insights({
             throughout your day.
           </p>
 
-        </div>
+          <small>
+            Explore music →
+          </small>
+        </button>
 
-        <div className="insight-card">
-
+        <button
+          className="insight-card"
+          onClick={() => onSourceSelect("Household Transactions")}
+        >
           <span>02</span>
 
           <h3>
@@ -50,10 +56,15 @@ function Insights({
             digital journey changes over time.
           </p>
 
-        </div>
+          <small>
+            Explore household activity →
+          </small>
+        </button>
 
-        <div className="insight-card">
-
+        <button
+          className="insight-card"
+          onClick={() => onSourceSelect("All")}
+        >
           <span>03</span>
 
           <h3>
@@ -66,10 +77,15 @@ function Insights({
             to explore.
           </p>
 
-        </div>
+          <small>
+            Explore all data →
+          </small>
+        </button>
 
-        <div className="insight-card">
-
+        <button
+          className="insight-card"
+          onClick={() => onSourceSelect("India Transactions")}
+        >
           <span>04</span>
 
           <h3>
@@ -83,10 +99,12 @@ function Insights({
             interactive timeline.
           </p>
 
-        </div>
+          <small>
+            Explore India transactions →
+          </small>
+        </button>
 
       </div>
-
     </section>
   );
 }

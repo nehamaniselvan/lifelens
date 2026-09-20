@@ -605,3 +605,26 @@ footer strong {
 .insight-card:hover {
   transform: translateY(-4px);
 }
+/* Accessible interactive cards */
+
+.connection-card,
+.insight-card,
+.timeline-item {
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+}
+
+.connection-card:focus-visible,
+.insight-card:focus-visible,
+.timeline-item:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+
+.connection-card:hover,
+.insight-card:hover,
+.timeline-item:hover {
+  transform: translateY(-5px);
+}
